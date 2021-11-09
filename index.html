@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Library</title>
+	</head>
+
+	<header>
+		<div class="title-container">
+			<img
+				class="logo"
+				src="images/book-stock-photography-clip-art-open-the-book-removebg-preview.png"
+			/>
+			<h1>Library</h1>
+		</div>
+		<div class="log-container">
+			<h2>Library Log</h2>
+			<p class="books-count">Total Books:</p>
+			<p class="read-count">Read:</p>
+			<p class="unread-count">Not Read:</p>
+		</div>
+	</header>
+
+	<body>
+		<div class="book-container">
+
+			<div class="book">
+				<h2 class="book-title">The Hobbit</h2>
+				<p class="book-author">Author: J.R.R. Tolkien</p>
+				<p class="book-pages">Pages: 304</p>
+        <p class="book-published">Published: September 21, 1937</p>
+        <label class="switch">
+					<p class="read-tag">Read:</p>
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+			</div>
+
+			<div class="book">
+				<h2 class="book-title">To Kill A Mockingbird</h2>
+				<p class="book-author">Author: Harper Lee</p>
+				<p class="book-pages">Pages: 281</p>
+        <p class="book-published">Published: July 11, 1960</p>
+        <label class="switch">
+					<p class="read-tag">Read:</p>
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
+		</div>
+
+		<button class="add-book">+</button>
+		<div id="add-form">
+			<form>
+				<h2>Add New Book</h2>
+				<button class="close-form">x</button>
+
+				<label for="title">Title: </label><br />
+				<input type="text" id="title" name="title" required /><small
+					class="err-msg"
+					>*Title is required</small
+				><br />
+				<small class="err-msg">*Title is required</small>
+
+				<label for="author">Author: </label><br />
+				<input type="text" id="author" name="author" required /><small
+					class="err-msg"
+					>*Author is required</small
+				><br />
+
+				<label for="pages">Pages: </label><br />
+				<input type="number" min="0" id="pages" name="pages" required /><small
+					class="err-msg"
+					>*Page count is required</small
+				><br />
+
+				<label for="date">Publication Date: </label><br />
+				<input type="date" id="date" name="date" required /><small
+					class="err-msg"
+					>*Publication date is required</small
+				><br />
+
+				<button class="form-submit" type="submit">Add Book</button>
+			</form>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
